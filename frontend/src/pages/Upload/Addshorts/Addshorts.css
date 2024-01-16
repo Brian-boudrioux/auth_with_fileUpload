@@ -1,0 +1,163 @@
+.container_Body_Add_Video {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  min-height: calc(100vh - 5.5rem);
+}
+
+.upload_Main_Title_Video {
+  font-size: 35px;
+  margin-top: 4rem;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 4rem;
+}
+
+.grid_Container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  width: 80%;
+  margin: auto;
+  gap: 1rem;
+}
+
+.add_A_Thumbnail_Container,
+.add_An_Element_Container {
+  border: dashed var(--white);
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  cursor: pointer;
+  height: 85%;
+}
+
+.add_A_Thumbnail_Container.error,
+.add_An_Element_Container.error {
+  border: dashed var(--red);
+}
+
+.selected_Thumbnail_Msg {
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+.error_Thumbnail,
+.error_File {
+  color: var(--red);
+}
+
+.element_Specs {
+  font-size: 1rem;
+}
+
+.add_A_Title_Container,
+.video_Description {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.add_A_Title_Container {
+  border-bottom: 1px solid var(--white);
+}
+
+.video_Description {
+  border: 1px solid var(--white);
+  overflow-y: auto;
+  word-break: normal;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  word-wrap: break-word;
+  padding: 1rem;
+}
+
+.description_Input,
+.title_Input {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  font-family: "poppins";
+  text-align: start;
+  cursor: pointer;
+}
+
+.title_Input {
+  font-size: 25px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.description_Input {
+  font-size: 20px;
+  resize: none;
+}
+
+.title_Input::placeholder,
+.description_Input::placeholder {
+  padding: 0;
+}
+
+.title_Input:focus,
+.description_Input:focus {
+  outline: none;
+}
+
+.text_Limit_Container {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+.add_Category_Container,
+.add_Tags_Container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.upload_Btn {
+  background-color: var(--orange);
+  color: var(--black);
+  border-radius: 50px;
+  border: none;
+  font-size: 30px;
+  font-weight: 400;
+  display: flex;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 7rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container_Body_Add_Video {
+    min-height: 100vh;
+  }
+
+  .grid_Container {
+    width: 70%;
+  }
+
+  .add_Category_Container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .add_Tags_Container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .upload_Btn {
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,41 @@
+.container_Body_Upload {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  min-height: calc(100vh - 10rem);
+}
+
+.upload_Main_Title {
+  font-size: 35px;
+  margin-top: 4rem;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.short_Or_Video_Container {
+  width: 85%;
+  height: 60%;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.add_A_Short_Container,
+.add_A_Video_Container {
+  border: dashed var(--white);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container_Body_Upload {
+    min-height: 100vh;
+  }
+
+  .short_Or_Video_Container {
+    width: 50%;
+  }
+}

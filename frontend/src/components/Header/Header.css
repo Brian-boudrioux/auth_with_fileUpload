@@ -1,0 +1,120 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.header-unregistered {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 0.0002rem solid var(--white);
+  margin-bottom: 1rem;
+}
+
+#logo_Sign {
+  width: 63px;
+  height: 63px;
+}
+
+.container_Search {
+  display: block;
+  display: flex;
+  align-items: center;
+  width: 56%;
+  height: 3.938rem;
+  border-radius: 50px 50px 50px 50px;
+  background-color: var(--black);
+  border: solid 2px rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: "poppins";
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 7%;
+  padding-right: 4%;
+}
+
+.input_Search {
+  display: block;
+  width: 95%;
+  height: 90%;
+  background-color: var(--black);
+  border-style: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  border-radius: 50px;
+}
+.input_Search::placeholder {
+  padding: 0;
+}
+.logIn_Btn {
+  background-color: var(--orange);
+  color: var(--black);
+  border-radius: 50px;
+  border: none;
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 87.5%;
+  height: 3.938rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#icon_Sign {
+  display: none;
+}
+
+.input_Search:hover,
+.input_Search:focus {
+  border: none;
+  outline: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    justify-content: space-around;
+  }
+  .header-unregistered {
+    justify-content: space-around;
+  }
+
+  #icon_Sign {
+    display: block;
+  }
+  #icon_Search {
+    display: block;
+  }
+  .container_Search {
+    width: 44%;
+    height: 3.8rem;
+    font-family: "poppins";
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .input_Search {
+    display: block;
+    width: 95%;
+    height: 90%;
+    background-color: var(--black);
+    border-style: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    border-radius: 50px;
+  }
+  .header-unregistered {
+    border-bottom: none;
+  }
+  .logIn_Btn {
+    width: 17.78%;
+  }
+}

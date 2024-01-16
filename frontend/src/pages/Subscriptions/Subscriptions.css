@@ -1,0 +1,36 @@
+.container_Body_Sub {
+  background-color: var(--black);
+  min-height: calc(100vh - 5.5rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title_Sub {
+  color: rgba(255, 255, 255, 1);
+  font-size: 35px;
+  text-align: center;
+  font-family: "poppins";
+  margin-top: 0.75rem;
+}
+
+.container_Tab_Sub {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border-bottom: 1px solid var(--white);
+  width: 100%;
+}
+
+.tab_Sub {
+  color: blueviolet;
+}
+
+@media only screen and (min-width: 1024px) {
+  * .container_Body_Sub {
+    min-height: 100vh;
+  }
+  .container_Tab_Sub {
+    border-bottom: 1px solid var(--white);
+  }
+}

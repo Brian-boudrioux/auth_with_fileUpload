@@ -1,0 +1,124 @@
+.video_Card {
+  width: 100%;
+  position: relative;
+}
+
+.video_Thumbnail {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video_Data {
+  display: flex;
+  padding: 0.3rem 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data_Container {
+  display: flex;
+  width: 85%;
+}
+
+.avatar_Container {
+  margin: 0 1rem;
+  display: flex;
+}
+
+.moreVert_Icon_Container {
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  flex-direction: column;
+}
+
+.moreVert_Icon_Container.active {
+  background-color: var(--grey);
+  transform: translateX(0);
+  transition: var(--speed) ease;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.moreVert_Icon_Container.inactive {
+  /* transform: translateX(2rem);  */
+  transition: var(--speed) cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.dropdown_Menu {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.dropdown_Menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: var(--speed) ease;
+}
+
+.dropdown_Menu.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--speed) cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.dropdown_Menu button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  padding: 0;
+}
+
+.dropdown_Menu ul {
+  list-style: none;
+  padding: 1rem;
+  text-align: left;
+}
+
+.dropdown_Menu button:hover {
+  color: var(--orange);
+}
+
+.channel_Details {
+  text-align: left;
+}
+
+.video_Title {
+  font-size: 1.2rem;
+}
+
+.creator_Username {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .video_Card {
+    width: 295px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .video_Thumbnail {
+    height: 162px;
+    width: 295px;
+    margin-bottom: 0;
+  }
+
+  .video_Data {
+    display: flex;
+    /* padding: 10px; */
+  }
+}

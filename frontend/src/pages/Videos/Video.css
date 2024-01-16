@@ -1,0 +1,14 @@
+.containeur_Body_Video {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  min-height: calc(100vh - 5.5rem);
+}
+@media only screen and (min-width: 1024px) {
+  .containeur_Body_Video {
+    min-height: calc(100vh);
+  }
+}

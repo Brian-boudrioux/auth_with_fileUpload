@@ -1,0 +1,209 @@
+.container_Body_Signup {
+  background-color: var(--black);
+  min-height: calc(100vh - 5.5rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container_Header_Sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.container_Sign {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.text_Title_Sign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title_Signup {
+  color: rgba(255, 255, 255, 1);
+  font-size: 35px;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+}
+
+#join_Us {
+  color: rgba(255, 255, 255, 1);
+  font-size: 25px;
+}
+
+.container_Input_Sign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  align-items: center;
+  gap: 0.5rem;
+  width: 80%;
+}
+
+#text_Sign {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.container_Sign {
+  display: flex;
+}
+
+.container_Email {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#email_Sign {
+  height: 3.8rem;
+  border-radius: 50px 50px 50px 50px;
+  background-color: var(--black);
+  border: solid 2px rgba(255, 255, 255, 1);
+  padding-left: 4.5%;
+  color: rgba(255, 255, 255, 1);
+  font-family: "poppins";
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.container_User {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#text_User {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+#username_Sign {
+  height: 3.8rem;
+  border-radius: 50px 50px 50px 50px;
+  background-color: var(--black);
+  border: solid 2px rgba(255, 255, 255, 1);
+  padding-left: 4.5%;
+  color: rgba(255, 255, 255, 1);
+  font-family: "poppins";
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.container_Pass {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#text_Pass {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+#pass_Sign {
+  height: 3.8rem;
+  border-radius: 50px 50px 50px 50px;
+  background-color: var(--black);
+  border: solid 2px rgba(255, 255, 255, 1);
+  padding-left: 4.5%;
+  color: rgba(255, 255, 255, 1);
+  font-family: "poppins";
+  font-size: 15px;
+}
+
+::placeholder {
+  font-size: 1em;
+  color: rgba(255, 255, 255, 1);
+  padding-left: 3%;
+}
+
+.container_But_Signup {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.signup_Button {
+  width: 100%;
+  margin-top: 3rem;
+  height: 3.8rem;
+  background-color: rgba(221, 167, 79, 1);
+  border-radius: 50px 50px 50px 50px;
+  font-family: "poppins";
+  font-size: 25px;
+  border: 1.5px rgba(221, 167, 79, 1);
+}
+
+.container_Text_End {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container_Body_Signup {
+    min-height: 100vh;
+  }
+  .text_Title_Sign {
+    margin-bottom: 4rem;
+  }
+  .title_Signup {
+    color: rgba(255, 255, 255, 1);
+    font-size: 35px;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+  }
+
+  #join_Us {
+    color: rgba(255, 255, 255, 1);
+    font-size: 25px;
+  }
+
+  #text_Sign {
+    font-size: 20px;
+  }
+
+  .container_Input_Sign {
+    width: 80%;
+  }
+
+  .container_Email {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  .container_User {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  .container_Pass {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  .signup_Button {
+    width: 30%;
+  }
+}

@@ -1,0 +1,110 @@
+.containeur_Body_Navbar {
+  border-top: 0.0002rem solid;
+  border-top-color: var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: var(--black);
+  height: 5.5rem;
+}
+.img_Admin_Navbar {
+  display: none;
+}
+.text_Favorites_Navbar,
+.text_Upload_Navbar,
+.text_Subscription_Navbar,
+.text_Profil_Navbar,
+.text_Admin_Navbar,
+.text_Category_Navbar,
+.text_Review_Navbar,
+.admin_Navbar_bloc {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hiddenNavbar {
+    display: none;
+  }
+  .containeur_Body_Navbar {
+    background-color: var(--grey);
+    right: 0px;
+    bottom: none;
+    width: 20.5%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+  .home_Navbar {
+    display: none;
+  }
+  .profil_Navbar_bloc {
+    order: -1;
+  }
+  .profil_Navbar {
+    height: 78px;
+    width: 78px;
+    margin-top: 1rem;
+  }
+  .img_Admin_Navbar {
+    display: block;
+    height: 78px;
+    width: 78px;
+    margin-top: 2.5rem;
+  }
+  .text_Favorites_Navbar,
+  .text_Upload_Navbar,
+  .text_Subscription_Navbar,
+  .text_Profil_Navbar,
+  .text_Admin_Navbar,
+  .text_Category_Navbar,
+  .text_Review_Navbar {
+    display: block;
+    text-align: center;
+    color: var(--white);
+    font-size: 30px;
+  }
+  .star_Navbar {
+    height: 55px;
+    width: 55px;
+  }
+  .upload_Navbar {
+    height: 52px;
+    width: 52px;
+  }
+  .subscribe_Navbar {
+    height: 48px;
+    width: 48px;
+  }
+  .category_Navbar {
+    height: 55px;
+    width: 55px;
+  }
+  .review_Navbar {
+    height: 60px;
+    width: 60px;
+  }
+  .admin_Navbar_bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .category_Navbar_bloc,
+  .review_Navbar_bloc,
+  .favorites_Navbar_bloc,
+  .upload_Navbar_bloc,
+  .subscription_Navbar_bloc,
+  .profil_Navbar_bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
