@@ -1,9 +1,11 @@
-import { useNavigate } from "react-router-dom";
-import React, { useRef } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import React, { useRef, useEffect } from "react";
+import { ToastContainer, Bounce, toast } from "react-toastify";
 import Header from "../../components/Header/Header";
 import useAuth from "../../context/AuthContext";
-import "./Login.css";
 import useOverview from "../../context/Overviewcontext";
+import "./Login.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function Login() {
   const isMobile = window.innerWidth < 1024;
@@ -12,6 +14,24 @@ function Login() {
   const password = useRef();
   const auth = useAuth();
   const { setIsRegistered, setIsAdmin } = useOverview();
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const activated = searchParams.get("activated");
+    if (activated) {
+      toast.success("Your email is confirmed, your account is activated", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
+    }
+  }, [searchParams]);
 
   const handleSubmit = async () => {
     try {
@@ -35,11 +55,26 @@ function Login() {
         setIsRegistered(true);
         setIsAdmin(false);
         navigate("/");
+      } else if (response.status === 401) {
+        toast.warn(
+          "You need to validate your account, please check your email",
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+          }
+        );
       } else {
         console.error("veuillez verifier votre saisie.");
       }
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
     }
   };
 
@@ -57,6 +92,19 @@ function Login() {
         <Header />
       )}
       <div className="container_Log">
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          transition={Bounce}
+        />
         <div className="text_Title_Log">
           <h1 className="title_Log">LOG IN</h1>
           <p id="text_Log">Hey! Welcome back!</p>

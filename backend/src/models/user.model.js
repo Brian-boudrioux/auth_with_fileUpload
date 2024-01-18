@@ -21,9 +21,14 @@ const findAll = () => {
   return db.query("SELECT * FROM Users");
 };
 
+const update = (user, id) => {
+  return db.query("UPDATE Users SET ? WHERE user_id = ?", [user, id]);
+};
+
 module.exports = {
   insert,
   findById,
   findByUsername,
   findAll,
+  update,
 };
