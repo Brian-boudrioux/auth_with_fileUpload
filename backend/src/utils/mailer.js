@@ -2,12 +2,12 @@ const nodemailer = require("nodemailer");
 
 const mailer = nodemailer.createTransport({
   pool: true,
-  host: "smtp-relay.brevo.com",
+  host: process.env.SMTP_HOST,
   port: 587,
   secure: false,
   auth: {
-    user: "bboudrioux@gmail.com",
-    pass: "xbYrkzmpwC3U2MRv",
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
 });
 
